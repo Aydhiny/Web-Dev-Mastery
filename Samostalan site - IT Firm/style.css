@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+ 
+nav{
+    display: flex;
+}
+nav ul{
+    display: flex;
+}
+nav li {
+    list-style-type: none;
+    margin: 20px;
+}
+nav a{
+    text-decoration: none;
+    transition: .3s;
+    color: rgb(255, 255, 255);
+}
+nav a:hover{
+    color: teal;
+}
+span{
+    color: teal;
+}
+.section-box img{
+    margin-bottom: 35px;
+    margin-top: 35px;
+    width: 100px;
+    height: auto;
+}
+.container h3{
+    margin-top: 15px;
+}
+.navbar{
+    background: linear-gradient(to right, rgb(0, 173, 153), rgb(0, 154, 139));
+    display: flex;
+
+    align-items: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+.content{
+    background-color: white;
+    flex: 1;
+    margin-left: 25px;
+    width: 200px;
+}
+.image{
+    position: relative;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+.logo-container{
+    cursor: pointer;
+}
+.logo{
+    margin: 0 20px;
+    filter: hue-rotate(140deg) drop-shadow(10px 10px 10px rgba(128, 128, 128, 0.578));
+    width: 50px;
+    height: auto;
+}
+.dugme{
+    margin-top: 25px;
+    color: white;
+    background-color: teal;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.dugme1 {
+    margin-top: 25px;
+    margin-left: 15px;
+    color: white;
+    background-color: teal;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.dugme:hover{
+    color: white;
+    background: black;
+}
+.dugme1:hover {
+    color: white;
+    background: black;
+}
+.sections{
+    display: flex;
+}
+.section-box{
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-weight: 300;
+    background: linear-gradient(90deg, rgb(0, 173, 153), rgb(0, 197, 197));
+}
+.ikona1{
+    display: flex;
+    width: 50px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: auto;
+}
+.content h1{
+    margin: 55px 0;
+}
+.button{
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: rgb(43, 43, 43);
+    border-radius: 5px;
+    border: none;        
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.button:hover{
+    color: white;
+    background-color: rgb(0, 173, 153);
+}
+.section-box h2{
+    margin-top: 25px;
+}
