@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Portfolio Dark Red</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">AYDHINY</div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="" class="active">Home</a>
+          </li>
+          <li>
+            <a href="">Features</a>
+          </li>
+          <li>
+            <a href="">Pricing</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="content-text">
+        <h1>Welcome to <span>Aydhiny.</span></h1>
+        <br />
+        <p>
+          <span>Aydhiny</span> is a certified platinum producer from Bosnia and
+          Herzegovina. He specializes in creating incredible high quality
+          creative work that is used on many music projects all over the world.
+          <br />
+          <br />
+          With an <strong>insaitable</strong> appetite for all genres, Alex
+          developed a deep appreciation for the diverse tapestry of sounds and
+          melodies that exist in the world. From classical compositions to
+          pulsating electronic beats, their eclectic taste shaped their unique
+          musical perspective.
+          <br />
+          <br />
+          <br />
+          In their humble home studio, Alex's creative sanctuary, they
+          meticulously craft intricate layers of melodies, harmonies, and
+          rhythms. Armed with an <span>array</span> of cutting-edge production
+          tools, their magic lies in their ability to blend organic
+          instrumentation with cutting-edge electronic elements, creating a
+          mesmerizing fusion of soundscapes that transport listeners to ethereal
+          realms.
+        </p>
+      </div>
+      <img src="images/avatar.jpg" alt="" />
+    </div>
+    <script>
+      hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = function () {
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+      };
+    </script>
+    <div class="header-text">
+      <h1>My <span>Services</span></h1>
+      <p>I offer services that can vastly improve your musical projects.</p>
+    </div>
+    <section class="container">
+      <div class="card">
+        <div class="card-image car-1"></div>
+        <h2>Mixing</h2>
+        <p>Professional Mixing services</p>
+        <a href="">READ MORE</a>
+      </div>
+      <div class="card">
+        <div class="card-image car-2"></div>
+        <h2>Mastering</h2>
+        <p>Professional Mastering services</p>
+        <a href="">READ MORE</a>
+      </div>
+      <div class="card">
+        <div class="card-image car-3"></div>
+        <h2>Loop Kits</h2>
+        <p>Professional Mixing services</p>
+        <a href="">READ MORE</a>
+      </div>
+    </section>
+    <div class="about-me">
+      <img src="images/avatar1.jpg" class="photo-logo" alt="" />
+      <div class="text">
+        <h1>Who Am I? <span>- Aydhiny</span></h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit alias,
+          magni dolorum magnam est libero veritatis praesentium quibusdam
+          facilis temporibus neque exercitationem quam. Ipsum ipsam corporis
+          quos iste, voluptatibus temporibus!
+          <br />
+          <br />
+          Lorem ipsum <span></span> dolor sit amet consectetur, adipisicing
+          elit. Veniam error molestiae alias cumque nihil accusamus facere,
+          quam, libero nisi reiciendis quos sequi id totam minus blanditiis
+          temporibus provident officiis eum.
+        </p>
+      </div>
+    </div>
+    <div class="foot">
+      <footer>Copyright Aydhiny Beats, Made by @Plansio</footer>
+    </div>
+  </body>
+</html>
