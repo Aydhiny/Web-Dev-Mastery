@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+body {
+  background-color: rgb(246, 212, 229);
+}
+.nav-bar {
+  background-color: deeppink;
+}
+
+.nav-bar img {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  margin: 10px;
+}
+.nav-bar ul {
+  display: flex;
+  background-color: deeppink;
+  padding: 25px;
+  justify-content: right;
+}
+.nav-bar li {
+  list-style-type: none;
+}
+.nav-bar a {
+  display: flex;
+  margin-left: 25px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.nav-bar a:hover {
+  color: black;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  justify-content: center;
+}
+
+.header-btn {
+  padding: 10px 25px;
+  padding: 10px 25px;
+  border: none;
+  background-color: deeppink;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 15px 10px 0px rgb(0, 0, 255);
+}
+.header-btn:hover {
+  color: deeppink;
+  box-shadow: 15px 20px 20px rgb(255, 0, 191);
+  background-color: aliceblue;
+}
+
+.header-img img {
+  width: 40%;
+  float: right;
+  height: auto;
+  box-shadow: 15px 20px 0px rgb(0, 0, 255);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header-img img:hover {
+  box-shadow: 15px 20px 20px rgb(255, 0, 191);
+}
+span {
+  color: rgb(255, 0, 106);
+  text-shadow: 5px 9px 0px rgba(0, 47, 255, 0.263);
+}
+.sections {
+  text-align: center;
+}
+.sections h2 {
+  margin-top: 7%;
+}
+button {
+  padding: 10px 25px;
+  border: none;
+  background-color: deeppink;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 15px 10px 0px rgb(0, 0, 255);
+}
+button:hover {
+  color: deeppink;
+  box-shadow: 15px 20px 20px rgb(255, 0, 191);
+  background-color: aliceblue;
+}
+.card-container {
+  display: grid;
+  margin-left: 100px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  background-color: rgb(255, 0, 106);
+  color: white;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+.about-us {
+  display: flex;
+  align-items: center;
+  background-color: rgb(254, 3, 124);
+  justify-content: space-evenly;
+  color: white;
+}
+.about-us img {
+  width: 25%;
+  height: auto;
+  margin: 25px;
+  box-shadow: 15px 10px 0px rgb(0, 26, 255);
+}
+.about-us h2 {
+  margin-left: 25px;
+  margin-bottom: 150px;
+}
+.about-us p {
+  margin-left: 25px;
+}
+.about-us button {
+  margin-left: 25px;
+}
+.foot {
+  background-color: rgb(53, 3, 254);
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+}
+footer {
+  color: white;
+  font-weight: bolder;
+}

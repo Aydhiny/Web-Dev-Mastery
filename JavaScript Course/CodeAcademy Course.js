@@ -628,3 +628,262 @@ let alienShip = {
 
 alienShip.takeOff();
 alienShip.retreat();
+
+//NESTED OBJECTS
+
+let spaceship = {
+  passengers: [
+    {
+      age: 15,
+    },
+  ],
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032,
+  },
+  crew: {
+    captain: {
+      name: "Sandra",
+      degree: "Computer Engineering",
+      encourageTeam() {
+        console.log("We got this!");
+      },
+      "favorite foods": ["cookies", "cakes", "candy", "spinach"],
+    },
+  },
+  engine: {
+    model: "Nimbus2000",
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD",
+    },
+    "back-up": {
+      battery: "Lithium",
+      terabytes: 50,
+    },
+  },
+};
+
+let capFave = spaceship.crew.captain["favorite foods"][0];
+let firstPassenger = spaceship.passengers[0];
+
+//PASS BY REFERENCE
+
+let spaceship = {
+  "Fuel Type": "Turbo Fuel",
+  homePlanet: "Earth",
+};
+
+let greenEnergy = (obj) => {
+  obj["Fuel Type"] = "avocado oil";
+};
+
+let remotelyDisable = (obj) => {
+  obj.disabled = true;
+};
+
+greenEnergy(spaceship);
+remotelyDisable(spaceship);
+
+console.log(spaceship);
+
+//LOOPING THROUGH OBJECTS
+
+let spaceship = {
+  crew: {
+    captain: {
+      name: "Lily",
+      degree: "Computer Engineering",
+      cheerTeam() {
+        console.log("You got this!");
+      },
+    },
+    "chief officer": {
+      name: "Dan",
+      degree: "Aerospace Engineering",
+      agree() {
+        console.log("I agree, captain!");
+      },
+    },
+    medic: {
+      name: "Clementine",
+      degree: "Physics",
+      announce() {
+        console.log(`Jets on!`);
+      },
+    },
+    translator: {
+      name: "Shauna",
+      degree: "Conservation Science",
+      powerFuel() {
+        console.log("The tank is full!");
+      },
+    },
+  },
+};
+
+for (let crewMember in spaceship.crew) {
+  console.log(
+    `${spaceship.crew[crewMember].name} : ${spaceship.crew[crewMember].degree}`
+  );
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//                            ADVANCED OBJECTS
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+// THIS KEYWORD
+const robot = {
+  model: "1E78V2",
+  energyLevel: 100,
+  provideInfo() {
+    return `I am ${this.model} and my current energy level is ${this.energyLevel}.  `;
+  },
+};
+
+console.log(robot.provideInfo());
+
+//ARROW FUNCTIONS AND THIS
+
+const robot3 = {
+  energyLevel: 100,
+  checkEnergy: () => {
+    console.log(`Energy is currently at ${this.energyLevel}%.`);
+  },
+};
+
+//THIS WON'T WORK.
+robot.checkEnergy();
+
+//PRIVACY AND UNDERSCORES
+
+const robot2 = {
+  _energyLevel: 100,
+  recharge() {
+    this._energyLevel += 30;
+    console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`);
+  },
+};
+
+robot._energyLevel = "high";
+robot.recharge();
+
+//GETTERS
+
+const robot5 = {
+  _model: "1E78V2",
+  _energyLevel: 100,
+  get energyLevel() {
+    if (typeof this._energyLevel === "number") {
+      return `My current energy level is ${this._energyLevel}`;
+    } else return "System malfunction: cannot retrieve energy level";
+  },
+};
+
+console.log(robot.energyLevel);
+
+//SETTERS
+
+const robot = {
+  _model: "1E78V2",
+  _energyLevel: 100,
+  _numOfSensors: 15,
+  get numOfSensors() {
+    if (typeof this._numOfSensors === "number") {
+      return this._numOfSensors;
+    } else {
+      return "Sensors are currently down.";
+    }
+  },
+  set numOfSensors(num) {
+    if (typeof num === "number" && num >= 0) this._numOfSensors = num;
+    else console.log("Pass in a number that is greater than or equal to 0");
+  },
+};
+
+robot.numOfSensors = 100;
+console.log(`${robot.numOfSensors}`);
+
+//FACTORY FUNCTIONS
+
+const robotFactory = (model, mobile) => {
+  return {
+    model: model,
+    mobile: mobile,
+    beep() {
+      console.log("Beep Boop");
+    },
+  };
+};
+
+const tinCan = robotFactory("P-500", true);
+tinCan.beep();
+
+// Property Value Shorthand
+// The difference between JS and C++. We don't have destructors here, yet we have Property VS.
+
+const robotFactory4 = (model, mobile) => {
+  return {
+    model,
+    mobile,
+    beep() {
+      console.log("Beep Boop");
+    },
+  };
+};
+
+// To check that the property value shorthand technique worked:
+const newRobot = robotFactory("P-501", false);
+console.log(newRobot.model);
+console.log(newRobot.mobile);
+
+//Destructured Assignment
+
+const robot = {
+  model: "1E78V2",
+  energyLevel: 100,
+  functionality: {
+    beep() {
+      console.log("Beep Boop");
+    },
+    fireLaser() {
+      console.log("Pew Pew");
+    },
+  },
+};
+
+const { functionality } = robot;
+functionality.beep();
+
+//Built-in Object Methods
+
+const robot = {
+  model: "SAL-1000",
+  mobile: true,
+  sentient: false,
+  armor: "Steel-plated",
+  energyLevel: 75,
+};
+
+// What is missing in the following method call?
+const robotKeys = Object.keys(robot);
+
+console.log(robotKeys);
+
+// Declare robotEntries below this line:
+
+const robotEntries = Object.entries(robot);
+console.log(robotEntries);
+
+// Declare newRobot below this line:
+const laserBlaster = true;
+const voiceRecognition = true;
+const newRobot24 = Object.assign(
+  { laserBlaster: true, voiceRecognition: true },
+  robot
+);
+console.log(newRobot);
