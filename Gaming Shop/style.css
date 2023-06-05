@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+body {
+  overflow-x: hidden;
+}
+.login {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  color: #f9d349;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #d57e12;
+  transition: 0.3s;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+}
+.login:hover {
+  color: white;
+  background-color: black;
+}
+.main-width {
+  width: 1400px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+nav ul li a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration-line: underline;
+}
+.hero {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: radial-gradient(#f9d349, 20%, #d57e12);
+}
+.content {
+  margin: 45px;
+  display: flex;
+}
+.text {
+  color: white;
+  padding-right: 25px;
+  margin-left: 45px;
+}
+.text h1 {
+  margin-bottom: 35px;
+  font-size: 50px;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+}
+.text p {
+  font-size: 15px;
+}
+.content img {
+  width: 50%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+}
+span {
+  color: #f9d349;
+}
+.btn {
+  padding: 15px 30px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+  color: #f9d349;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #d57e12;
+  transition: 0.3s;
+  box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.319);
+}
+.btn:hover {
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+  color: white;
+  background: #f9d349;
+}
+.about {
+  display: flex;
+  margin: 55px;
+}
+.about img {
+  width: 50%;
+  margin-left: 150px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+}
+.cards {
+  display: flex;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+}
+.card {
+  background-color: rgb(255, 200, 0);
+  width: 25%;
+  padding: 25px;
+  border-radius: 5px;
+  display: grid;
+  height: auto;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+}
+.naslovi {
+  text-align: center;
+  margin-top: 15rem;
+  margin-bottom: 25px;
+}
+.card-container {
+  justify-content: center;
+  display: flex;
+  gap: 5rem;
+}
+.csgo {
+  font-weight: bolder;
+  text-align: start;
+}
+.card p {
+  margin-top: 50px;
+}
