@@ -10,10 +10,10 @@ body {
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
-  color: #f9d349;
+  color: white;
   font-weight: bolder;
   cursor: pointer;
-  background-color: #d57e12;
+  background-color: #1291d5;
   transition: 0.3s;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
 }
@@ -46,7 +46,7 @@ nav ul li a:hover {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: radial-gradient(#f9d349, 20%, #d57e12);
+  background: radial-gradient(#9849f9, 20%, #034cf6);
 }
 .content {
   margin: 45px;
@@ -79,10 +79,10 @@ span {
   margin-top: 25px;
   border: none;
   border-radius: 5px;
-  color: #f9d349;
+  color: white;
   font-weight: bolder;
   cursor: pointer;
-  background-color: #d57e12;
+  background-color: #1291d5;
   transition: 0.3s;
   box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.319);
 }
@@ -112,8 +112,9 @@ span {
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
 }
 .card {
-  background-color: rgb(255, 200, 0);
+  background-color: rgb(0, 140, 255);
   width: 25%;
+  color: white;
   padding: 25px;
   border-radius: 5px;
   display: grid;
@@ -122,6 +123,7 @@ span {
 }
 .naslovi {
   text-align: center;
+  color: white;
   margin-top: 15rem;
   margin-bottom: 25px;
 }
@@ -136,4 +138,85 @@ span {
 }
 .card p {
   margin-top: 50px;
+}
+.about {
+  display: flex;
+}
+.about img {
+  width: 50%;
+  height: auto;
+}
+.text-2 {
+  display: block;
+}
+.continue {
+  margin-left: 45px;
+  display: flex;
+  padding-bottom: 25px;
+}
+.continue img {
+  margin-left: 45px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+  border-radius: 15px;
+}
+#act {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+#act input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.319);
+}
+.foot {
+  padding: 35px;
+  background-color: #2c009a;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+.foot h4 {
+  margin-bottom: 25px;
+}
+@media (max-width: 1000px) {
+  /* CSS rules for 1000px and below */
+  .main-width {
+    max-width: 90%;
+  }
+  .content {
+    flex-direction: column;
+    margin: 25px;
+  }
+  .text {
+    margin-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .content img {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 45%;
+    margin: 10px;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about img {
+    margin: 25px auto;
+  }
+  .continue {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+  }
+  .continue img {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
 }
