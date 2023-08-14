@@ -4,19 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>WEATHER</title>
   </head>
   <body>
+    <div class="date">14.08.2023</div>
+    <nav>Project made by A.M</nav>
     <div class="location">
-      <h1 class="location-timezone">Timezone</h1>
-      <p>Icon</p>
+      <h1 class="location-timezone">Sarajevo</h1>
+      <i class="fa-solid fa-cloud"></i>
     </div>
     <div class="temperature">
       <div class="degree-section">
         <h2 class="temperature-degree">34</h2>
-        <span>C</span>
+        <span> °C</span>
       </div>
       <div class="temperature-description">It's really hot today!</div>
+    </div>
+    <div class="buttons">
+      <button class="btn">Reset</button>
+      <button class="btn-fix" onclick="fetching()">Show Location Data</button>
     </div>
 
     <script src="app.js"></script>
