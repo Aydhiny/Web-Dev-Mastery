@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wikipedia Viewer</title>
+  </head>
+  <body>
+    <div class="creator">
+      <p>Created by A.M</p>
+    </div>
+    <div id="search-container">
+      <input type="text" id="search-box" placeholder="Search on Wikipedia" />
+      <button id="search-button">Search</button>
+      <!-- Add this line -->
+    </div>
+    <div id="results"></div>
+
+    <script>
+      const searchButton = document.getElementById("search-button");
+      const searchBox = document.getElementById("search-box");
+      const resultsContainer = document.getElementById("results");
+
+      searchButton.addEventListener("click", () => {
+        const searchTerm = searchBox.value;
+        if (searchTerm.trim() === "") return;
+
+        fetch(
+          `https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=${searchTerm}&origin=*`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            const titles = data[1];
+            const descriptions = data[2];
+            const links = data[3];
+
+            resultsContainer.innerHTML = "";
+
+            for (let i = 0; i < titles.length; i++) {
+              const title = titles[i];
+              const description = descriptions[i];
+              const link = links[i];
+
+              const resultItem = document.createElement("div");
+              resultItem.innerHTML = `<a href="${link}" target="_blank">${title}</a><p>${description}</p>`;
+              resultsContainer.appendChild(resultItem);
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
