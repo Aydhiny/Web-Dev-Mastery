@@ -11,12 +11,12 @@ function makeMove(cellIndex) {
     if (checkWin()) {
       setTimeout(() => {
         alert(currentPlayer + ' wins!');
-        resetGame();
+        wins.innerHTML = `<h1>${currentPlayer} wins!</h1>`
       }, 100);
     } else if (isBoardFull()) {
       setTimeout(() => {
         alert('It\'s a draw!');
-        resetGame();
+         wins.innerHTML = `<h1>It\'s a draw!</h1>`
       }, 100);
     } else {
       currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
@@ -42,6 +42,7 @@ function isBoardFull() {
 }
 
 function resetGame() {
+  wins.innerHTML = "";
   Array.from(cells).forEach(cell => {
     cell.textContent = '';
     cell.classList.remove('X', 'O');
